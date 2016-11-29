@@ -2,7 +2,7 @@
 using System;
 namespace FormsAssistControl
 {
-	public class Student: ObservableBaseObject
+	public class Student: ObservableBaseObject,IKeyObject
     {
 
 
@@ -46,5 +46,11 @@ namespace FormsAssistControl
 			set { average = value; OnPropertyChanged(); }
         }
 
-	}
+        public string Key
+        {
+            get;
+            set;
+           
+        }
+    }
 }
